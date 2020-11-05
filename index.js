@@ -15,6 +15,10 @@ if (process.env.NODE_ENV === 'production') {
 
 app.use(express.urlencoded({extended: true}));
 app.use(express.json());
+app.post("/likeRecipe",(req,res) =>{
+  console.log(req.body);
+  res.json({status: "ok"})
+} )
 app.use(routes);
 
 app.listen(PORT, () => {
