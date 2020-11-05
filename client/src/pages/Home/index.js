@@ -4,8 +4,8 @@ import Recipe from './recipie';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 import '../../App.css';
-import { Container } from '@material-ui/core';
-import Jumbotron from 'react-bootstrap/Jumbotron';
+// import { Container } from '@material-ui/core';
+// import Jumbotron from 'react-bootstrap/Jumbotron';
 
 export const Home = () => {
     // const Application_ID = "df96bbad";
@@ -19,10 +19,16 @@ export const Home = () => {
 
     const [recipes, setRecipes] = useState([]);
     const [getInput, setGetInput] = useState("");
-    
+
     useEffect(() => {
         axios.post(req)
             .then((res) => {
+                const uri = res.data.hits[0].recipe.uri;
+                const recipe = uri.split("#")[1]
+                console.log(recipe);
+                const id = recipe.split("_")[1]
+                console.log(id);
+
                 setRecipes(res.data.hits)
             })
     }, [])
@@ -46,24 +52,32 @@ export const Home = () => {
     return (
         <>
             <div className="App">
-            <Form onSubmit={submitForm} className="form">
-                <input type="text" value={getInput} onChange={getValue} className="input" />
-                <Button type="submit" className="button"> Search </Button>
-            </Form>
-<Jumbotron>
-           <div className="eachRecipe">
-           {recipes.map((recipe, index) => (
-                <Recipe
-                    key={index}
-                    title={recipe.recipe.label}
-                    // ingre={recipe.recipe.ingredientLines}
-                    ingredients= {recipe.recipe.ingredients}
-                    link={<a href={recipe.recipe.shareAs} target="_blank">Click here to see more datails</a>}
-                    image={recipe.recipe.image}
-                />
-            ))}
-           </div>
-           </Jumbotron>
+                <Form onSubmit={submitForm} className="form">
+                    <input type="text" value={getInput} onChange={getValue} className="input" />
+                    <Button type="submit" className="button"> Search </Button>
+                </Form>
+
+                <div className="eachRecipe">
+                    {recipes.map((recipe, index) => {
+                        const x = recipe.recipe.uri.split("#")[1]
+                        //    console.log(x);
+                        const id = x.split("_")[1]
+                        console.log(id);
+                        return (
+                            <Recipe
+                                key={id}
+                                title={recipe.recipe.label}
+                                // ingre={recipe.recipe.ingredientLines}
+                                ingredients={recipe.recipe.ingredients}
+                                link={<a href={recipe.recipe.shareAs} target="_blank">Click here to see more datails</a>}
+                                image={recipe.recipe.image}
+                                id={id}
+
+                            />
+                        )
+                    })}
+                </div>
+
             </div>
         </>
     );
