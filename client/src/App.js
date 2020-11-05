@@ -7,6 +7,7 @@ import {
   WrappedSignUp,
   WrappedSignIn,
 } from './pages/Viewer';
+import MainPage from './pages/mainPage/mainPage';
 
 
 
@@ -16,7 +17,8 @@ function App() {
       <Navbar/>
       <Route path='/signup' component={WrappedSignUp}/>
       <Route path='/signin' component={WrappedSignIn}/>
-      <Route exact path="/" component={Home}/>
+      <Route exact path="/home" component={Home}/>
+      <Route exact path="/" component={MainPage}/>
 
     </Router>
   );
