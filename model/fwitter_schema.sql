@@ -19,3 +19,12 @@ CREATE TABLE fweets (
     PRIMARY KEY (id)
 );
 
+CREATE TABLE recipes (
+    id INT AUTO_INCREMENT NOT NULL,
+    recipe VARCHAR(255) NOT NULL,
+    title VARCHAR(255) NOT NULL,
+    img VARCHAR(255) NOT NULL,
+    ingredient VARCHAR(255) NOT NULL,
+    PRIMARY KEY (id)
+);
+
