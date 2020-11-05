@@ -4,7 +4,7 @@ import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Button from '@material-ui/core/Button';
 import { Link, useHistory } from 'react-router-dom';
-
+import '../../../App.css';
 
 import {useSelector, useDispatch} from 'react-redux';
 import {setViewerToken} from '../../Viewer';
@@ -35,10 +35,11 @@ export default function ButtonAppBar() {
   };
 
   return (
-    <div className={classes.root}>
-      <AppBar position="static">
-        <Toolbar>
+    <div  className="nav">
+      {/* <AppBar position="static"> */}
+        {/* <Toolbar> */}
           <Button
+         
             component={Link}
             to='/'
             color="inherit">
@@ -47,6 +48,7 @@ export default function ButtonAppBar() {
           {
             token ?
               <Button
+              
                 color='inherit'
                 onClick={ handleSignOut}
               >
@@ -54,21 +56,26 @@ export default function ButtonAppBar() {
               </Button> :
               <div>
                 <Button
+                className="sign"
                   to='/signup'
                   component={Link}
                   color="inherit">
                   Sign Up
                 </Button>
                 <Button
+                className="sign"
                   to='/signin'
                   component={Link}
                   color="inherit">
                   Sign In
                 </Button>
+                <h1 className="logo">
+                  LOGO
+                </h1>
               </div>
           }
-        </Toolbar>
-      </AppBar>
+        {/* </Toolbar> */}
+      {/* </AppBar> */}
     </div>
   );
 };
