@@ -97,11 +97,12 @@ box-shadow:2px 2px 4px #000000;
   /* margin-left: 140px; */
  
 }
-.logo{
-  display: flex;
-  letter-spacing: 0.5rem;
-  justify-self: start;
-}
 .sign {
   text-align: end;
+  margin-left: 800px;
+  letter-spacing: 0.5rem;
+}
+.fa{
+  background-size: 4px;
+  color: rgb(0, 106, 255);
 }
