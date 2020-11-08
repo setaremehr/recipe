@@ -3,6 +3,7 @@ import axios from 'axios';
 import Recipe from './recipie';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
+import Comp from './comp';
 import '../../App.css';
 // import { Container } from '@material-ui/core';
 // import Jumbotron from 'react-bootstrap/Jumbotron';
@@ -14,7 +15,7 @@ export const Home = () => {
 
     const app_ID = "10ec3f21";
     const app_Keys = "51a1cb1b8ba12ff927e0da7eb7c46b6d";
-    let searchItem = 'chicken'
+    let searchItem = 'shrimp'
     let req = `https://cors-anywhere.herokuapp.com/https://api.edamam.com/search?q=${searchItem}&app_id=${app_ID}&app_key=${app_Keys}`
 
     const [recipes, setRecipes] = useState([]);
@@ -57,28 +58,30 @@ export const Home = () => {
                     <Button type="submit" className="button"> Search </Button>
                 </Form>
 
-                <div className="eachRecipe">
-                    {recipes.map((recipe, index) => {
-                        const x = recipe.recipe.uri.split("#")[1]
-                        //    console.log(x);
-                        const id = x.split("_")[1]
-                        console.log(id);
-                        return (
-                            <Recipe
-                                key={id}
-                                title={recipe.recipe.label}
-                                // ingre={recipe.recipe.ingredientLines}
-                                ingredients={recipe.recipe.ingredients}
-                                link={<a href={recipe.recipe.shareAs} target="_blank">Click here to see more datails</a>}
-                                image={recipe.recipe.image}
-                                id={id}
+               {/* <div className="container"> */}
+                    <div className="eachRecipe"> 
+                        {recipes.map((recipe, index) => {
+                            const x = recipe.recipe.uri.split("#")[1]
+                            //    console.log(x);
+                            const id = x.split("_")[1]
+                            console.log(id);
+                            return (
+                                <Recipe
+                                    key={id}
+                                   title={recipe.recipe.label}
+                                    // ingre={recipe.recipe.ingredientLines}
+                                    ingredients={recipe.recipe.ingredients}
+                                    // link={<a href={recipe.recipe.shareAs} target="_blank">Click here to see more datails</a>}
+                                    image={recipe.recipe.image}
+                                    id={id}
+                                    // link={{ pathname: `/comp/${Recipe.recipe_id}`}}
 
-                            />
-                        )
-                    })}
+                                />
+                            )
+                        })}
+                    </div>
                 </div>
-
-            </div>
+            {/* </div> */}
         </>
     );
 }
