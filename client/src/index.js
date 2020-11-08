@@ -3,7 +3,7 @@ import { configureStore } from '@reduxjs/toolkit';
 import { Provider } from 'react-redux';
 import ReactDOM from 'react-dom';
 import { createLogger } from 'redux-logger';
-
+import Router from './pages/Home/Router';
 import App from './App';
 
 import rootReducer from './redux';
@@ -25,7 +25,8 @@ const store = configureStore({
 
 ReactDOM.render(
   <Provider store={store}>
-    <App/>
+    {/* <App/> */}
+    <Router />
   </Provider>
   ,
   document.getElementById('root'));
