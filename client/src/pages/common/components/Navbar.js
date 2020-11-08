@@ -5,6 +5,8 @@ import Toolbar from '@material-ui/core/Toolbar';
 import Button from '@material-ui/core/Button';
 import { Link, useHistory } from 'react-router-dom';
 import '../../../App.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faSearch, faHouseUser } from '@fortawesome/free-solid-svg-icons'
 
 import { useSelector, useDispatch } from 'react-redux';
 import { setViewerToken } from '../../Viewer';
@@ -37,20 +39,20 @@ export default function ButtonAppBar() {
   return (
     <div className="nav">
       {/* <AppBar position="static"> */}
-      {/* <Toolbar> */}
+      <Toolbar>
       <Button
 
         to="/"
         component={Link}
       >
-        HOME
+          <FontAwesomeIcon icon={faHouseUser} style={{ fontSize: "25px" }}/>
           </Button>
       <Button
 
         component={Link}
         to='/home'
         color="inherit">
-        SEARCH
+       <FontAwesomeIcon icon={faSearch} style={{ fontSize: "25px" }} />
           </Button>
       {
         token ?
@@ -75,13 +77,11 @@ export default function ButtonAppBar() {
               color="inherit">
               Sign In
                 </Button>
-            <h1 >
-              LOGO
-                </h1>
+            
           </div>
       }
 
-      {/* </Toolbar> */}
+      </Toolbar>
       {/* </AppBar> */}
     </div>
   );
