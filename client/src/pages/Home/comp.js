@@ -7,7 +7,12 @@ class Comp extends React.Component {
     state = {
         currentRecipe: {
             image: "",
-            label: ""
+            label: "",
+            source: "",
+            calories: "",
+            dietLabels:"",
+            healthLabels:"",
+            shareAs:""
         }
     }
     componentDidMount = async () => {
@@ -51,7 +56,7 @@ class Comp extends React.Component {
                 <p className="publisher-comp ">
                     Website: <span> <a className="a"href={recipe.shareAs}> click here to see more datails 🧸</a></span>
                 </p>
-                <button className="button-comp"> <Link to="/comp" className="a">Go Home</Link> </button>
+                <button className="button-comp"> <Link to="/" className="a">Go Home</Link> </button>
 
                </div>
             </div>
