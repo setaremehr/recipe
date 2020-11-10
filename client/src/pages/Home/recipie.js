@@ -32,6 +32,7 @@ const Recipe = ({ title, link, ingredients, image, id }) => {
                     ,
                     state: { comp: title }
                 }}> View Datails </Link> </button>
+                <button className="button" >  Save Me </button>
             </div >
         </div>
         // </div>
