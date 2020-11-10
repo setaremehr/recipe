@@ -12,12 +12,12 @@ CREATE TABLE users (
 );
 
 
-CREATE TABLE fweets (
-	id INT AUTO_INCREMENT NOT NULL,
-    fweet VARCHAR(255) NOT NULL,
-    userId INT references users(id),
-    PRIMARY KEY (id)
-);
+-- CREATE TABLE fweets (
+-- 	id INT AUTO_INCREMENT NOT NULL,
+--     fweet VARCHAR(255) NOT NULL,
+--     userId INT references users(id),
+--     PRIMARY KEY (id)
+-- );
 
 CREATE TABLE recipes (
     id INT AUTO_INCREMENT NOT NULL,
