@@ -10,6 +10,8 @@ import { faSearch, faHouseUser } from '@fortawesome/free-solid-svg-icons'
 
 import { useSelector, useDispatch } from 'react-redux';
 import { setViewerToken } from '../../Viewer';
+import Save from '../../Home/saveRecipe';
+import { faHeart } from '@fortawesome/free-solid-svg-icons';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -77,6 +79,13 @@ export default function ButtonAppBar() {
               color="inherit">
               Sign In
                 </Button>
+
+            <Button
+              to='../Home/saveRecipe'
+              component = {Link}>
+              <i class="fas fa-heart"></i>
+            </Button> 
+         
             
           </div>
       }
