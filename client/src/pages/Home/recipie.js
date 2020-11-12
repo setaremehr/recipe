@@ -1,9 +1,11 @@
 import React from 'react';
+import ReactDom from 'react-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHeart } from '@fortawesome/free-solid-svg-icons';
 import { Link } from "react-router-dom";
 // import Comp from './comp';
 import '../../App.css';
+import Save from './saveRecipe';
 
 const Recipe = ({ title, link, ingredients, image, id }) => {
     const clickHandler = (recipe_id) => {
@@ -26,16 +28,18 @@ const Recipe = ({ title, link, ingredients, image, id }) => {
             </h5>
             {/* <p className="a">{link}</p> */}
             <div className="butt">
-                <button className="button" data={id} onClick={() => clickHandler(id)}><FontAwesomeIcon icon={faHeart} className="" />  </button>
+                <button className="button" data={id} onClick={() => clickHandler(id)}><FontAwesomeIcon icon={faHeart} className="" /> <Link to={{pathname: '/Save'}}></Link> </button>
                 <button className="button"> <Link className="a" to={{
                     pathname: `/comp/${id}`
                     ,
                     state: { comp: title }
                 }}> View Datails </Link> </button>
-                <button className="button" >  Save Me </button>
+                {/* <button className="button" >  Save Me </button> */}
             </div >
         </div>
         // </div>
     );
 }
+
+ReactDom.render (React.createElement (Save, null), document.getElementById('root'));
 export default Recipe;

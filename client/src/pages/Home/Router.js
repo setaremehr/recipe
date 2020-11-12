@@ -9,6 +9,7 @@ import {
 } from '../../pages/Viewer';
 
 import MainPage from '../../pages/mainPage/mainPage';
+import Save from './saveRecipe';
 
 
 
@@ -21,6 +22,7 @@ const Router = () => (
         <Route path='/home' component={Home} exact />
         <Route path='/comp/:id' component={Comp} exact />
         <Route exact path="/" component={MainPage}/>
+        <Route exact path="/save" component={Save}/>
         {/* </Switch> */}
 
     </BrowserRouter>
