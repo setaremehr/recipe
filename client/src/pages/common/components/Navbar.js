@@ -66,6 +66,15 @@ export default function ButtonAppBar() {
         color="inherit">
        <FontAwesomeIcon icon={faSearch} style={{ fontSize: "25px" }} />
           </Button>
+          <Button
+              to='../Home/saveRecipe'
+              component = {Link}
+              color="inherit">
+              <FontAwesomeIcon icon={faHeart} style={{ fontSize: "25px" }} />
+              {/* <i class="fas fa-heart"></i> */}
+              { likes.length }
+            </Button> 
+         
       {
         token ?
           <Button
@@ -89,14 +98,6 @@ export default function ButtonAppBar() {
               color="inherit">
               Sign In
                 </Button>
-
-            <Button
-              to='../Home/saveRecipe'
-              component = {Link}>
-              <i class="fas fa-heart"></i>
-              { likes.length }
-            </Button> 
-         
             
           </div>
       }
