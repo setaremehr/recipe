@@ -28,3 +28,10 @@ CREATE TABLE recipes (
     PRIMARY KEY (id)
 );
 
+CREATE TABLE likes (
+    id INT AUTO_INCREMENT NOT NULL,
+    recipe_id VARCHAR(255) NOT NULL,
+    user_id VARCHAR(255) NOT NULL,
+    PRIMARY KEY (id)
+);
+

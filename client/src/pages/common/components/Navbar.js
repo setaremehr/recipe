@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
@@ -10,6 +10,7 @@ import { faSearch, faHouseUser } from '@fortawesome/free-solid-svg-icons'
 
 import { useSelector, useDispatch } from 'react-redux';
 import { setViewerToken } from '../../Viewer';
+import { setViewerLikes } from "../../Viewer/ViewerReducer";
 import Save from '../../Home/saveRecipe';
 import { faHeart } from '@fortawesome/free-solid-svg-icons';
 
@@ -28,10 +29,19 @@ const useStyles = makeStyles((theme) => ({
 
 export default function ButtonAppBar() {
   const classes = useStyles();
-  const { token } = useSelector(state => state.viewer);
+  const { token, likes } = useSelector(state => state.viewer);
   const dispatch = useDispatch();
   const history = useHistory();
-
+  useEffect(() => {
+    if (likes.length > 0) {
+      return
+    } 
+    const fetchData = async () => {
+      const result = await fetch("/api/likes", { method: "get", headers: { "content-type": "application/json" } })
+      dispatch(setViewerLikes(await result.json()))
+    }
+    fetchData()
+  },[likes]) 
   const handleSignOut = () => {
     localStorage.removeItem('token');
     dispatch(setViewerToken(null));
@@ -84,6 +94,7 @@ export default function ButtonAppBar() {
               to='../Home/saveRecipe'
               component = {Link}>
               <i class="fas fa-heart"></i>
+              { likes.length }
             </Button> 
          
             
