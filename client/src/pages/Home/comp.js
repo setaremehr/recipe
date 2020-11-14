@@ -56,7 +56,7 @@ class Comp extends React.Component {
                 <p className="publisher-comp ">
                     Website: <span> <a className="a"href={recipe.shareAs}> click here to see more datails 🧸</a></span>
                 </p>
-                <button className="button-comp"> <Link to="/" className="a">Go Home</Link> </button>
+                <button className="button-comp"> <Link to="/home" className="a">Go Home</Link> </button>
 
                </div>
             </div>
