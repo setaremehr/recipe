@@ -1,225 +1,256 @@
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
-  height: 100%;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
-    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  /* background: var(--clr-grey-10); */
-  color: var(--clr-grey-1);
-  /* line-height: 1.5; */
-  font-size: 0.875rem;
-  
+    height: 100%;
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    /* background: var(--clr-grey-10); */
+    color: var(--clr-grey-1);
+    /* line-height: 1.5; */
+    font-size: 0.875rem;
 }
+
+
 /* .logoliner{
-  min-height: 100vh;
-  background-image:linear-gradient(to top, #fcc5e4 0%, #fda34b 15%, #ff7882 35%, #c8699e 52%, #7046aa 71%, #0c1db8 87%, #020f75 100%);
-} */
+    min-height: 100vh;
+    background-image:linear-gradient(to top, #fcc5e4 0%, #fda34b 15%, #ff7882 35%, #c8699e 52%, #7046aa 71%, #0c1db8 87%, #020f75 100%);
+  } */
+
+
 /* .logo{
-  background-image: url(https://png.pngtree.com/thumb_back/fw800/back_our/20190617/ourmid/pngtree-yellow-gourmet-background-poster-image_129069.jpg);
-  
-  background-repeat: no-repeat, repeat;
-  background-size: auto;
-  height: 500px;
-  background-position: center;
- 
+    background-image: url(https://png.pngtree.com/thumb_back/fw800/back_our/20190617/ourmid/pngtree-yellow-gourmet-background-poster-image_129069.jpg);
+    
+    background-repeat: no-repeat, repeat;
+    background-size: auto;
+    height: 500px;
+    background-position: center;
+   
+  } */
 
-} */
 .App {
-  min-height: 100vh;
-  background-image: linear-gradient(-225deg, #231557 0%, #44107A 29%, #FF1361 67%, #FFF800 100%);
+    min-height: 100vh;
+    background-image: linear-gradient(-225deg, #231557 0%, #44107A 29%, #FF1361 67%, #FFF800 100%);
 }
+
 .form {
-  background: var(--clr-white);
-  max-width: var(--fixed-width);
-  margin: 0 auto;
-  margin-bottom: 4rem;
-  padding: 1rem 2rem;
-  border-radius: var(--radius);
+    background: var(--clr-white);
+    max-width: var(--fixed-width);
+    margin: 0 auto;
+    margin-bottom: 4rem;
+    padding: 1rem 2rem;
+    border-radius: var(--radius);
 }
+
 .eachRecipe {
-  width: 90vw;
-  display: grid;
-  max-width: 1000px;
-  margin: 5rem;
-  gap: 2rem;
-  padding-right: 50px;
-
- 
-
+    width: 90vw;
+    display: grid;
+    max-width: 1000px;
+    margin: 5rem;
+    gap: 2rem;
+    padding-right: 50px;
 }
+
 @media screen and (min-width: 576px) {
     .eachRecipe {
         grid-template-columns: repeat(3, 1fr)
     }
 }
+
 .button {
-  margin-left: 1rem;
-  display: inline-block;
-  background: #7046aa;
-  color: #fcc5e4;
-  border-color: transparent;
-  margin-top: 1rem;
-  letter-spacing:unset;
-  padding: 1rem 1rem;
-  text-transform: capitalize;
-  border-radius: 1rem;
-  cursor: pointer;
- 
+    margin-left: 1rem;
+    display: inline-block;
+    background: #7046aa;
+    color: #fcc5e4;
+    border-color: transparent;
+    margin-top: 1rem;
+    letter-spacing: unset;
+    padding: 1rem 1rem;
+    text-transform: capitalize;
+    border-radius: 1rem;
+    cursor: pointer;
 }
-.button-comp{
-  background: #4178af;
-  padding: 1rem 1rem;
-  letter-spacing:0.25rem;
-  border-radius: 1rem;
 
+.button-comp {
+    background: #4178af;
+    padding: 1rem 1rem;
+    letter-spacing: 0.25rem;
+    border-radius: 1rem;
 }
-.button-comp:hover{
-  background: rgb(194, 57, 15);
-  color: rgb(5, 32, 105);
+
+.button-comp:hover {
+    background: rgb(194, 57, 15);
+    color: rgb(5, 32, 105);
 }
+
 .button:hover {
-  background: rgb(194, 57, 15);
-  color: rgb(5, 32, 105);
+    background: rgb(194, 57, 15);
+    color: rgb(5, 32, 105);
 }
-.input {
-  border-color: beige; 
-  padding: 1rem 4rem;
-  background: rgba(0, 255, 238, 0.673);
-  border-radius: 1rem;
-  animation-name: myinput;
-  animation-duration: 14s;
-  border-style: dotted;
-}
-@keyframes myinput {
-  0%   {background-color: rgb(242, 102, 102);}
-  25%  {background-color: rgb(247, 247, 55);}
-  50%  {background-color: rgb(72, 111, 238);}
-  100% {background-color: rgb(126, 215, 126);}
-}
-/* .img {
-  width: 250px;
-  height: 250px;
-  border-radius: 15%;
-  margin-right: 1rem;
-  margin-top: 1rem;
-} */
-.a {
-  margin-top: 1rem;
-  color:lightseagreen;
-  text-transform: capitalize;
-  text-decoration: none;
-}
-.recipe{
-  /* margin-right: 20px; */
-  background: rgba(0, 255, 255, 0.666);
-  border-radius: 1rem;
-  padding: 1rem 2rem;
-  box-shadow:2px 2px 4px #000000;
-  border-style: dotted;
-  text-align: center;
-  }
 
-.bacllog{
-  background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
-  min-height: 100vh;
-  margin-top: 0rem;
+.input {
+    border-color: beige;
+    padding: 1rem 4rem;
+    background: rgba(0, 255, 238, 0.673);
+    border-radius: 1rem;
+    animation-name: myinput;
+    animation-duration: 14s;
+    border-style: dotted;
 }
+
+@keyframes myinput {
+    0% {
+        background-color: rgb(242, 102, 102);
+    }
+    25% {
+        background-color: rgb(247, 247, 55);
+    }
+    50% {
+        background-color: rgb(72, 111, 238);
+    }
+    100% {
+        background-color: rgb(126, 215, 126);
+    }
+}
+
+
+/* .img {
+    width: 250px;
+    height: 250px;
+    border-radius: 15%;
+    margin-right: 1rem;
+    margin-top: 1rem;
+  } */
+
+.a {
+    margin-top: 1rem;
+    color: lightseagreen;
+    text-transform: capitalize;
+    text-decoration: none;
+}
+
+.recipe {
+    /* margin-right: 20px; */
+    background: rgba(0, 255, 255, 0.666);
+    border-radius: 1rem;
+    padding: 1rem 2rem;
+    box-shadow: 2px 2px 4px #000000;
+    border-style: dotted;
+    text-align: center;
+}
+
+.bacllog {
+    background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
+    min-height: 100vh;
+    margin-top: 0rem;
+}
+
 .nav {
-  background-color: rgb(231, 128, 77);
-  display: grid;
-  grid-template-columns: repeat(4, auto);
-  background-image: url(pages/mainPage/image/crayola-kiddy-font.regular.png);
-  background-repeat: no-repeat, repeat;
-  background-position: center;
-  padding: 35px;
-  margin-bottom: 0rem;
-  position: relative;
-  /* border-style: dotted; */
-  /* justify-self: end; */
-  /* text-align: end; */
-  /* margin-left: 140px; */
- 
+    background-color: rgb(231, 128, 77);
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    background-image: url(pages/mainPage/image/crayola-kiddy-font.regular.png);
+    background-repeat: no-repeat, repeat;
+    background-position: center;
+    padding: 35px;
+    margin-bottom: 0rem;
+    position: relative;
+    /* border-style: dotted; */
+    /* justify-self: end; */
+    /* text-align: end; */
+    /* margin-left: 140px; */
 }
+
 .sign {
-  text-align: end;
-  margin-left: 800px;
-  letter-spacing: 0.5rem;
+    text-align: end;
+    margin-left: 800px;
+    letter-spacing: 0.5rem;
 }
-.fa{
-  background-size: 4px;
-  color: rgb(0, 106, 255);
+
+.fa {
+    background-size: 4px;
+    color: rgb(0, 106, 255);
 }
-.recipe-comp{
-  margin: 0 auto;
-  width: 60%;
+
+.recipe-comp {
+    margin: 0 auto;
+    width: 60%;
 }
+
 .publisher-comp {
-  text-transform: uppercase;
-  font-size:0.75rem;
-  margin-bottom: 1rem;
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    margin-bottom: 1rem;
 }
-.imgg{
-  height: 300px !important;
-  /* border-radius: 15%; */
-  box-shadow: -11px 12px 54px -13px rgba(0,0,0,0.75);
-  margin-top: 20px;
-  margin-bottom: 10px;
+
+.imgg {
+    height: 300px !important;
+    /* border-radius: 15%; */
+    box-shadow: -11px 12px 54px -13px rgba(0, 0, 0, 0.75);
+    margin-top: 20px;
+    margin-bottom: 10px;
 }
-.title{
-text-transform: uppercase;
-letter-spacing: 2px;
-margin: 1rem 0;
+
+.title {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin: 1rem 0;
 }
-.img-box{
-  background: #fff;
-  padding-bottom: 2rem;
-  border-radius: 35px;
-  box-shadow: -1px 2px 34px -13px rgba(0,0,0,0.75);
-  text-align: left;
-  overflow: hidden;
- 
- 
+
+.img-box {
+    background: #fff;
+    padding-bottom: 2rem;
+    border-radius: 35px;
+    box-shadow: -1px 2px 34px -13px rgba(0, 0, 0, 0.75);
+    text-align: left;
+    overflow: hidden;
 }
-.imgbox{
-  border-radius: 35px;
-  box-shadow: -11px 12px 54px -13px rgba(0,0,0,0.75);
+
+.imgbox {
+    border-radius: 35px;
+    box-shadow: -11px 12px 54px -13px rgba(0, 0, 0, 0.75);
 }
+
 .ol {
-  list-style-type: none;
-  margin-top: 15px;
-} 
-.flex{
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  
+    list-style-type: none;
+    margin-top: 15px;
 }
-.flex > div {
-  width: 100px;
-  margin: 10px;
+
+.flex {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
 }
-.card{
-  text-align: center;
+
+.flex>div {
+    width: 100px;
+    margin: 10px;
 }
-.fresh{
-  background-image: linear-gradient(to right, #3ab5b0 0%, #3d99be 31%, #56317a 100%);
-  min-height: 100vh;
+
+.card {
+    text-align: center;
 }
-.butt{
-  margin-bottom: 5px;
+
+.fresh {
+    background-image: linear-gradient(to right, #3ab5b0 0%, #3d99be 31%, #56317a 100%);
+    min-height: 100vh;
 }
-.bg{
-  background-image: url(../src/pages/mainPage/image/sss.jpg);
-  height: 100vh;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+
+.butt {
+    margin-bottom: 5px;
 }
-.font{
-  font-family: 'Pacifico', cursive;
+
+.bg {
+    background-image: url(../src/pages/mainPage/image/sss.jpg);
+    height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.font {
+    font-family: 'Pacifico', cursive;
 }

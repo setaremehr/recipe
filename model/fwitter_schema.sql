@@ -35,3 +35,9 @@ CREATE TABLE likes (
     PRIMARY KEY (id)
 );
 
+-- CREATE TABLE unlike (
+--     id INT AUTO_INCREMENT NOT NULL,
+--     recipe_id VARCHAR(255) NOT NULL,
+--     user_id VARCHAR(255) NOT NULL,
+--     PRIMARY KEY (id)
+-- );
