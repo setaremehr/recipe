@@ -37,11 +37,11 @@ export default function ButtonAppBar() {
       return
     } 
     const fetchData = async () => {
-      const result = await fetch("/api/likes", { method: "get", headers: { "content-type": "application/json" } })
+      const result = await fetch("http://localhost:3001/api/likes", { method: "get", headers: { "content-type": "application/json" } })
       dispatch(setViewerLikes(await result.json()))
     }
     fetchData()
-  },[likes]) 
+  },[]) 
   const handleSignOut = () => {
     localStorage.removeItem('token');
     dispatch(setViewerToken(null));
