@@ -1,5 +1,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
 
+![](client/src/pages/mainPage/image/crayola-kiddy-font.regular.png)
+
 # Table of Contents
 
 - [Table of Contents](#table-of-contents)
