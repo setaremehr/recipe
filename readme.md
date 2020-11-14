@@ -1,33 +1,42 @@
-Step 1 Clone this repo somewhere in your machine
-Step 2 is cd into this repo, and then run 
-MAC rm -rf .git
-Windows Powershell rm -force .git
+<!-- [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT) -->
 
-Step 3 git init
-Step 4 git add -A
-Step 5 git commit -m 'Init repo'
-Step 6 Make a git repo
-Step 7 copy the git remote add origin line and paste it to your repo
-Step 8 git push -u origin master
-Step 9 Add your team members to the repo
-Step 10 protect the master branch just in case people merge changes to master
+# Table of Contents
 
+- [Table of Contents(#table-of-contents)
+    - [Github Links:](#github-links)
+  - [Demo](#demo)
+  - [Dependencies](#dependencies)
+  - [Contributors](#contributors)
+  - [Questions](#questions)
 
-Proj 2 Requirements
-Must use a Node and Express web server
-Must be backed by a SQL Database
-Must be deployed to Heroku with data
-Must have a polished UI
-Must have a folder structure that meets the MVC paradigm
-Must Use React
-Must meet good quality coding standards (indentation etc)
-Must have GET and POST request for creating and getting data
-Must protect API keys in Node with environmental Variables
+### Github Links:
 
+## Demo
 
-You need to create a .env file that has a JWT_SECRET.
-The content of the file should look like the code below.
+## Dependencies
 
-JWT_SECRET=asdyuofgayudagdyuadsgar837rgsdada
- DUE DATE ON  NOVEMBER 14
+- fortawesome/fontawesome-svg-core
+- fortawesome/free-solid-svg-icons
+- fortawesome/react-fontawesome
+- bcryptjs
+- dotenv
+- express
+- if-env
+- jsonwebtoken
+- mysql2
+- passport
+- passport-jwt
+- passport-local
+- passport-local
+- react-dom
 
+## Contributors
+[//]: contributor-faces
+
+<a href="https://github.com/setaremehr"><img src="https://avatars2.githubusercontent.com/u/66357101?v=4" width="80" height="80"></a>
+
+[//]: contributor-faces
+
+## Questions
+
+- If you have any questions you can contact me here: setaremehr89@gmail.com
