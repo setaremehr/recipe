@@ -39,11 +39,10 @@
 <a href="https://github.com/setaremehr"><img src="https://avatars2.githubusercontent.com/u/66357101?v=4" width="80" height="80"></a> <a href="https://github.com/taradehdari"><img src="https://avatars.githubusercontent.com/taradehdari
 " width="80" height="80"></a>
 
-
-
 [//]: contributor-faces
 
 ## Questions
 
-- If you have any questions you can contact us here: setaremehr89@gmail.com
-tara.dehdari@gmail.com
+- If you have any questions you can contact us here: 
+* setaremehr89@gmail.com
+* tara.dehdari@gmail.com
