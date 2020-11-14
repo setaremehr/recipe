@@ -50,9 +50,10 @@ const Recipe = ({ title, link, ingredients, image, id }) => {
                 {/* <button className="button" >  Save Me </button> */}
             </div>
         </div>
-        // </div>
+        // </div> 
     );
 }
+
 
 ReactDom.render (React.createElement (Save, null), document.getElementById('root'));
 export default Recipe;
