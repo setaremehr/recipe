@@ -3,8 +3,12 @@ import { reduxForm, Field } from 'redux-form';
 import TextField from '@material-ui/core/TextField';
 import axios from 'axios';
 import Button from '@material-ui/core/Button';
-
+import { makeStyles, useTheme } from '@material-ui/core/styles';
 import { setViewerToken } from '../ViewerReducer';
+import Card from '@material-ui/core/Card';
+import CardContent from '@material-ui/core/CardContent';
+// import CardMedia from '@material-ui/core/CardMedia';
+// import Card from 'react-bootstrap/Card'
 // The Field components job is to render out input html
 // and pass down functions for updating the state
 // as well as check to see if the values being passed are valid
@@ -38,7 +42,46 @@ const TextFieldInput = ({ input, meta, label }) => {
 //what handleSubmit will do is pass the forms Values as the first parameter
 // handleSubmit also preventsDefault for us right away
 // to the function that it's calling
+const useStyles = makeStyles((theme) => ({
+  root: {
+    display: 'flex',
+    // boxShadow: '20 20 20 black',
+    margin: theme.spacing(0),
+    width: '40ch',
+    height: '30ch',
+    marginTop: '15ch',
+    marginLeft: '50ch',
+    margin: 0,
+
+  },
+  details: {
+
+    display: 'flex',
+    flexDirection: 'column',
+    // width: '50ch',
+    // height: '50ch',
+  },
+  content: {
+
+    alignItems: 'center',
+    borderRadius: '1rem',
+    borderColor: 'black',
+    border: '20rem',
+    flex: '1 0 auto',
+  },
+  cover: {
+    // width: 151,
+  },
+  controls: {
+    display: 'flex',
+    // alignItems: 'center',
+    paddingLeft: theme.spacing(13),
+    paddingBottom: theme.spacing(9),
+
+  },
+}));
 const SignIn = (props) => {
+  const classes = useStyles();
   const { handleSubmit, history } = props;
 
   console.log(props);
@@ -55,25 +98,42 @@ const SignIn = (props) => {
     }
   }
 
+
   return (
-    <form noValidate autoComplete="off">
-      <Field
-        name='username'
-        label='username'
-        component={TextFieldInput}
-      />
-      <Field
-        name='password'
-        label='password'
-        component={TextFieldInput}
-      />
-      <Button
-        onClick={ handleSubmit(handleSignIn) }
-        variant="contained"
-        color="primary">
-        Sign in
+
+   
+
+    <Card className={classes.root} >
+      <div className="signIn">
+        <form noValidate autoComplete="on" className={classes.details} >
+          <CardContent className={classes.content}>
+
+            <Field
+              className={classes.field}
+              name='username'
+              label='username'
+              component={TextFieldInput}
+            />
+            <Field
+              name='password'
+              label='password'
+              component={TextFieldInput}
+            />
+          </CardContent>
+          <div className={classes.controls}>
+            <Button
+              onClick={handleSubmit(handleSignIn)}
+              variant="outlined"
+              color="primary">
+              Sign in
       </Button>
-    </form>
+          </div>
+
+        </form>
+      </div>
+    </Card>
+
+   
   );
 };
 
