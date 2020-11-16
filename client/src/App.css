@@ -2,9 +2,16 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    
 }
 
 body {
+    background-image: linear-gradient(to right, #f83904fe 0%, #f9d423 100%);
+    /* background-image: linear-gradient(to top, #384ab0c8 0%, #5955aed8 13%, #7b5face1 25%, #8f6aaeda 38%, #a86aa4 50%, #cc6b8fe2 62%, #f18271eb 75%, #f3a469 87%, #f7c978 100%); */
+    /* background-color: #CDDCDC;
+ background-image: radial-gradient(at 50% 100%, rgba(255,255,255,0.50) 0%, rgba(0,0,0,0.50) 100%), linear-gradient(to bottom, rgba(255,255,255,0.25) 0%, rgba(0,0,0,0.25) 100%);
+ background-blend-mode: screen, overlay; */
+    min-height: 100vh;
     height: 100%;
     margin: 0;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
@@ -12,6 +19,13 @@ body {
     color: var(--clr-grey-1);
     /* line-height: 1.5; */
     font-size: 0.875rem;
+}
+.signIn{
+    background-image: linear-gradient(to right, #f83600be 0%, #f9d423 100%);
+    /* background-image: linear-gradient(-60deg, #ff5858 0%, #f09819 100%); */
+    /* min-height: 100vh; */
+    margin-top: 0em;
+    
 }
 
 
@@ -147,27 +161,35 @@ body {
     min-height: 100vh;
     margin-top: 0rem;
 }
+/* .ss{
+    background-color: tomato;
+    margin-bottom: 0rem;
+} */
 
 .nav {
-    background-color: rgb(231, 128, 77);
+    /* background-color: rgb(231, 128, 77); */
     display: grid;
-    grid-template-columns: repeat(4, auto);
-    background-image: url(pages/mainPage/image/crayola-kiddy-font.regular.png);
+    /* grid-template-columns: repeat(4, auto); */
+    /* background-image: url(pages/mainPage/image/crayola-kiddy-font.regular.png); */
+ background-image: url(https://lh3.googleusercontent.com/G6_0X95jT4ngXvsDhIHy0asB9zwC7Z2H978gOwDSC-CPbqm2OTlLZ-qQvBAKAQGvXjdv); 
     background-repeat: no-repeat, repeat;
     background-position: center;
     padding: 35px;
     margin-bottom: 0rem;
     position: relative;
+    height: 150px;
+    width: 1000px;
+  
     /* border-style: dotted; */
     /* justify-self: end; */
     /* text-align: end; */
-    /* margin-left: 140px; */
+    margin-left: 140px;
 }
 
 .sign {
-    text-align: end;
-    margin-left: 800px;
-    letter-spacing: 0.5rem;
+    text-align: justify;
+    margin-left: 500px;
+    /* letter-spacing: 0.5rem; */
 }
 
 .fa {
