@@ -33,10 +33,9 @@ circ:{
   '& > *': {
     margin: theme.spacing(1),
     //  marginLeft: theme.spacing(14),
-    marginLeft: 35,
-    boxShadow: '20',
+    marginLeft: 45,
     alignItems: 'center',
-    marginRigt: '40',
+    // marginRigt: 50,
 
 },
 },
@@ -47,7 +46,7 @@ circ:{
     flexGrow: 1,
   },
   header: {
-    backgroundImage: "linear-gradient(to right, #f83904dd 0%, #f9d423 100%)",
+    // backgroundImage: "linear-gradient(to right, #f83904dd 0%, #f9d423 100%)",
     // backgroundImage: "linear-gradient(to right, #fa709a 0%, #fee140 100%)",
     padding: 35,
     marginBottom: 0,
@@ -105,7 +104,7 @@ export default function ButtonAppBar() {
       <div className={classes.root} >
 
         <Grid container spacing={3} >
-          <AppBar position="sticky" className={classes.header}>
+          <AppBar position="sticky" className={classes.header} className="head">
             <Toolbar variant="dense">
 
            <div className="fa">

@@ -49,9 +49,13 @@ const useStyles = makeStyles((theme) => ({
     margin: theme.spacing(0),
     width: '40ch',
     height: '30ch',
-    marginTop: '15ch',
-    marginLeft: '50ch',
+    marginTop: '25ch',
+    marginLeft: '63ch',
+    marginRight: '50ch',
     margin: 0,
+    border: 15,
+    color: 'black',
+    // boxShadow: '20px 10px 10px 2px rgba(255, 105, 135, .3)',
 
   },
   details: {

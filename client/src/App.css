@@ -6,7 +6,9 @@
 }
 
 body {
-    background-image: linear-gradient(to right, #f83904fe 0%, #f9d423 100%);
+    /* background-color: black; */
+    background-image: url("https://i.pinimg.com/originals/e7/7c/21/e77c21787c730568f6a26429166a192f.png") ;
+    background-repeat: repeat;
     /* background-image: linear-gradient(to top, #384ab0c8 0%, #5955aed8 13%, #7b5face1 25%, #8f6aaeda 38%, #a86aa4 50%, #cc6b8fe2 62%, #f18271eb 75%, #f3a469 87%, #f7c978 100%); */
     /* background-color: #CDDCDC;
  background-image: radial-gradient(at 50% 100%, rgba(255,255,255,0.50) 0%, rgba(0,0,0,0.50) 100%), linear-gradient(to bottom, rgba(255,255,255,0.25) 0%, rgba(0,0,0,0.25) 100%);
@@ -19,6 +21,10 @@ body {
     color: var(--clr-grey-1);
     /* line-height: 1.5; */
     font-size: 0.875rem;
+}
+.head {
+    background-image: linear-gradient(to right, #f35b31c5 0%, #f9d423 100%);
+    padding: 35px;
 }
 .signIn{
     background-image: linear-gradient(to right, #f83600be 0%, #f9d423 100%);
@@ -53,9 +59,10 @@ body {
 
 .App {
     min-height: 100vh;
-    background-image: linear-gradient(-225deg, #231557 0%, #44107A 29%, #FF1361 67%, #FFF800 100%);
+    /* background-image: linear-gradient(to top, #3f51b1 0%, #5a55ae 13%, #7b5fac 25%, #8f6aae 38%, #a86aa4 50%, #cc6b8e 62%, #f18271 75%, hsl(57, 74%, 52%) 87%, #7e38e7 100%);                                  */
+    /* background-image: linear-gradient(-225deg, #231557 0%, #44107A 29%, #FF1361 67%, #FFF800 100%); */
 }
-
+  
 .form {
     background: var(--clr-white);
     max-width: var(--fixed-width);
@@ -70,8 +77,10 @@ body {
     display: grid;
     max-width: 1000px;
     margin: 5rem;
-    gap: 2rem;
-    padding-right: 50px;
+    gap: 5rem;
+    /* padding-right: 50px; */
+    margin-right: 40px;
+    position: relative;
 }
 
 @media screen and (min-width: 576px) {
@@ -79,12 +88,17 @@ body {
         grid-template-columns: repeat(3, 1fr)
     }
 }
+.buttonQ{
+    border-radius: 1rem;
+    padding: 0.5rem 0.5rem;
+    color: rgb(252, 252, 252);
+}
 
 .button {
     margin-left: 1rem;
     display: inline-block;
-    background: #7046aa;
-    color: #fcc5e4;
+    background: #57a4b9;
+    color: rgb(17, 16, 16);
     border-color: transparent;
     margin-top: 1rem;
     letter-spacing: unset;
@@ -95,10 +109,11 @@ body {
 }
 
 .button-comp {
-    background: #4178af;
+   /* color: #e7ecf0; */
     padding: 1rem 1rem;
     letter-spacing: 0.25rem;
     border-radius: 1rem;
+    color:black;
 }
 
 .button-comp:hover {
@@ -112,7 +127,7 @@ body {
 }
 
 .input {
-    border-color: beige;
+    border-color: rgb(5, 5, 2);
     padding: 1rem 4rem;
     background: rgba(0, 255, 238, 0.673);
     border-radius: 1rem;
@@ -147,14 +162,14 @@ body {
 
 .a {
     margin-top: 1rem;
-    color: lightseagreen;
+    color: rgb(4, 5, 5);
     text-transform: capitalize;
     text-decoration: none;
 }
 
 .recipe {
     /* margin-right: 20px; */
-    background: rgba(0, 255, 255, 0.666);
+    background: rgba(214, 251, 251, 0.608);
     border-radius: 1rem;
     padding: 1rem 2rem;
     box-shadow: 2px 2px 4px #000000;
