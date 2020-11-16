@@ -5,7 +5,7 @@ function BackImage() {
     return (
         <div>
             <Card
-                style={{ width: "10rem", marginLeft: "15px", marginTop: "0px" }}
+                style={{ width: "10rem", marginLeft: "15px", marginTop: "13px" }}
             >
                 <Card.Img
                     variant="top"
