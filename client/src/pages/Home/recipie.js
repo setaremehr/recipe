@@ -46,7 +46,7 @@ const Recipe = ({ title, link, ingredients, image, id }) => {
       {/* <p className="a">{link}</p> */}{" "}
       <div className="butt">
         <button
-          className="button"
+          className="buttonQ"
           style={{
             backgroundColor: likes.some((e) => e.recipe_id === id)
               ? "red"
