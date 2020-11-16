@@ -6,7 +6,9 @@ import Button from '@material-ui/core/Button';
 
 import { connect } from 'react-redux';
 import { compose } from 'redux';
-import { setViewerToken } from '../ViewerReducer';
+import { setViewerLikes, setViewerToken } from '../ViewerReducer';
+import { CardContent, makeStyles } from '@material-ui/core';
+import { Card } from '@material-ui/core/Card'
 // The Field components job is to render out input html
 // and pass down functions for updating the state
 // as well as check to see if the values being passed are valid
@@ -83,7 +85,6 @@ class SignUp extends Component {
   }
 }
 
-
 // const SignUp = (props) => {
 //   const { handleSubmit, history } = props;
 //
@@ -127,6 +128,81 @@ function mapStateToProps(state) {
   return { superman: state.viewer };
 };
 
+const useStyles = makeStyles((theme) => ({
+  root: {
+    display: 'flex',
+    width: '40ch',
+    height: '30ch',
+    marginTop: '25ch',
+    marginLeft: '63ch',
+    marginRight: '50ch',
+    margin: 0,
+    border: 15,
+    color: 'black',
+  },
+  details: {
+    display: 'flex',
+    flexDirection: 'column',
+  },
+  content: {
+    alignItems: 'center',
+    borderRadius: '1rem',
+    borderColor: 'black',
+    border: '20rem',
+    flex: '1 0 auto',
+  },
+  controls: {
+    display: 'flex',
+    paddingLeft: theme.spacing(13),
+    paddingBottom: theme.spacing(9),
+  },
+}));
+const SignUp = (props) => {
+  const classes = useStyles();
+  const { handleSubmit, history } = props;
+
+  console.log(props);
+  const handleSignUp = async (formValues, dispatch) => {
+    console.log(formValues);
+    try {
+      const res = await axios.post('/auth/singin', formValues);
+      localStorage.setItem('token', res.data);
+      dispatch(setViewerToken(res.data));
+      history.push('/users');
+    } catch (e) {
+      throw new Error (e);
+    }
+  }
+
+  return (
+    <Card className={classes.root} >
+      <div className="signUp">
+        <form noValidate autoComplete="on" className={classes.details} >
+          <CardContent className={classes.conent}>
+            <Field
+              className={classes.field}
+              name='username'
+              label='username'
+              component={TextFieldInput}
+            />
+            <Field
+              name='password'
+              label='password'
+              component={TextFieldInput}
+            />
+          </CardContent>
+          <div className = {classes.controls}>
+            <Button
+              onClick={handleSubmit(handleSignUp)}
+              variant="outlined"
+              color="primary">
+                Sign Up
+              </Button>
+          </div>
+        </form>
+      </div>
+    </Card>
+  );
 // mapDispatchToProps
 
 // const composedComponent = connect(mapStateToProps, { setUserToken })(SignUp);
