@@ -15,7 +15,7 @@ export const Home = () => {
 
     const app_ID = "10ec3f21";
     const app_Keys = "51a1cb1b8ba12ff927e0da7eb7c46b6d";
-    let searchItem = 'shrimp'
+    let searchItem = 'cioppino'
     let req = `https://cors-anywhere.herokuapp.com/https://api.edamam.com/search?q=${searchItem}&app_id=${app_ID}&app_key=${app_Keys}`
 
     const [recipes, setRecipes] = useState([]);
