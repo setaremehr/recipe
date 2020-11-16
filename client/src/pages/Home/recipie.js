@@ -24,7 +24,7 @@ const Recipe = ({ title, link, ingredients, image, id }) => {
       const result = await fetch("http://localhost:3001/api/like", {
         method: "post",
         headers: { "content-type": "application/json" },
-        body: JSON.stringify({ recipe_id, user_id: "taradehdari" }),
+        body: JSON.stringify({ recipe_id, user_id: "" }),
       });
       dispatch(setViewerLikes(await result.json()));
     }
