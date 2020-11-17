@@ -7,8 +7,8 @@ import { makeStyles, useTheme } from '@material-ui/core/styles'
 import { connect } from 'react-redux';
 import { compose } from 'redux';
 import { setViewerToken } from '../ViewerReducer';
-import { CardContent } from '@material-ui/core/CardContent';
-import { Card } from '@material-ui/core/Card'
+import CardContent from '@material-ui/core/CardContent';
+import Card from '@material-ui/core/Card'
 // The Field components job is to render out input html
 // and pass down functions for updating the state
 // as well as check to see if the values being passed are valid
@@ -85,48 +85,9 @@ const TextFieldInput = ({ input, meta, label }) => {
 //   }
 // }
 
-// const SignUp = (props) => {
-//   const { handleSubmit, history } = props;
-//
-//   console.log(props);
-//   const handleSignUp = async (formValues) => {
-//     console.log(formValues);
-//     //{ username: 'Your enterereduseRName', password: 'your password' }
-//     try {
-//       const res = await axios.post('/auth/signup', formValues);
-//       console.log('I AM THE SIGNUP USERS TOKEN', res.data);
-//       localStorage.setItem('token', res.data);
-//       history.push('/users');
-//       // sessionStorage.setItem('token', res.data);
-//     } catch (e) {
-//       throw new Error(e);
-//     }
-//   }
-//
-//   return (
-//     <form noValidate autoComplete="off">
-//       <Field
-//         name='username'
-//         label='username'
-//         component={TextFieldInput}
-//       />
-//       <Field
-//         name='password'
-//         label='password'
-//         component={TextFieldInput}
-//       />
-//       <Button
-//         onClick={ handleSubmit(handleSignUp) }
-//         variant="contained"
-//         color="primary">
-//         Sign up
-//       </Button>
-//     </form>
-//   );
-// };
-// function mapStateToProps(state) {
-//   return { superman: state.viewer };
-// };
+function mapStateToProps(state) {
+  return { superman: state.viewer };
+};
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -157,6 +118,7 @@ const useStyles = makeStyles((theme) => ({
     paddingBottom: theme.spacing(9),
   },
 }));
+
 const SignUp = (props) => {
   const classes = useStyles();
   const { handleSubmit, history } = props;
@@ -203,6 +165,7 @@ const SignUp = (props) => {
       </div>
     </Card>
   );
+  };
 // mapDispatchToProps
 
 // const composedComponent = connect(mapStateToProps, { setUserToken })(SignUp);
@@ -211,8 +174,7 @@ const SignUp = (props) => {
 // export const WrappedSignUp = reduxForm({ form: 'signUpForm' })(composedComponent);
 
 
-// export const WrappedSignUp = reduxForm({ form: 'signUpForm' })(connect(mapStateToProps, { setUserToken })(SignUp));
-export const SignUp = reduxForm({ form: 'signUpForm' })(SignUp);
+export const WrappedSignUp = reduxForm({ form: 'signUpForm' })(connect(mapStateToProps, { setViewerToken })(SignUp));
 
 // export const SignUp = compose(
 //   reduxForm({ form: 'signUpForm' }),
