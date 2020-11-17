@@ -14,14 +14,14 @@ const Recipe = ({ title, link, ingredients, image, id }) => {
   const { likes } = useSelector((state) => state.viewer);
   const clickHandler = async (recipe_id) => {
     if (likes.some((e) => e.recipe_id === recipe_id)) {
-      const result = await fetch("http://localhost:3001/api/like", {
+      const result = await fetch("/api/like", {
         method: "delete",
         headers: { "content-type": "application/json" },
         body: JSON.stringify({ recipe_id, user_id: "taradehdari" }),
       });
       dispatch(setViewerLikes(await result.json()));
     } else {
-      const result = await fetch("http://localhost:3001/api/like", {
+      const result = await fetch("/api/like", {
         method: "post",
         headers: { "content-type": "application/json" },
         body: JSON.stringify({ recipe_id, user_id: "" }),
