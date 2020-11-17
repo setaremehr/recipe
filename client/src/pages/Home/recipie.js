@@ -69,7 +69,7 @@ const Recipe = ({ title, link, ingredients, image, id }) => {
             }}
           >
             {" "}
-            View Datails{" "}
+            View Details{" "}
           </Link>{" "}
         </button>{" "}
         {/* <button className="button" >  Save Me </button> */}{" "}

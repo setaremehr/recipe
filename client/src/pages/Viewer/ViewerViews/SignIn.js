@@ -129,7 +129,7 @@ const SignIn = (props) => {
               onClick={handleSubmit(handleSignIn)}
               variant="outlined"
               color="primary">
-              Sign in
+              Sign In
       </Button>
           </div>
 
